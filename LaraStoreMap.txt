@@ -1,0 +1,57 @@
+
+Larastore system (english,french,mybe arabic) multiple auth system
+
+
+
+
+
+
+Product   (belongs to Categorie)
+
+Name
+Description
+Price
+Discount
+Stock
+
+
+Categorie (Has 0 or Many Product ) on delete cascade
+
+Name
+Description
+
+
+Reviews (Made by Costumer,(belongs to Categorie) )
+
+Comment 
+Star
+
+
+Costumer (credentials )  sepearate from admin console
+
+Fisrt Name
+Last Name
+DOB
+Adresse
+Email
+
+Cart (list of items pushed in cart )
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
