@@ -13,9 +13,19 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
+        Schema::enableForeignKeyConstraints();
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('Name');
+            $table->text('Description');
+            $table->integer('Price');
+            $table->integer('Discount');
+            $table->integer('Stock');
             $table->timestamps();
+
+            $table->unsignedInteger('Categorie_id');
+
+            $table->foreign('Categorie_id')->references('id')->on('categories');
         });
     }
 
@@ -29,3 +39,4 @@ class CreateProductsTable extends Migration
         Schema::dropIfExists('products');
     }
 }
+
