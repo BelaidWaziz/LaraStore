@@ -6,7 +6,7 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        I'm {{this.name}}.
                     </div>
                 </div>
             </div>
@@ -16,6 +16,12 @@
 
 <script>
     export default {
+         data : function() {
+            return {
+            ToPro:1200,
+            name:'Xavi Hernandez'
+            }
+        },
         mounted() {
             console.log('Component mounted.')
         }
