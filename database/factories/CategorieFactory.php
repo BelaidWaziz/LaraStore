@@ -6,6 +6,6 @@ $factory->define(App\Categorie::class, function (Faker $faker) {
     return [
         //
         'name'=>$faker->word,
-        'Description'=>$faker->paragraph(400)
+        'Description'=>$faker->text(100)
     ];
 });
